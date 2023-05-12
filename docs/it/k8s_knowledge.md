@@ -20,9 +20,7 @@
   - Volume for data storage *Database data or log data has to be persistent*
   - Replica *Can be configured to create a replica pod*
   - Deployment *All the pod or container will be created by deployment and replica will be configured within a deployment*
-  - Stateful set *For application like databases such as mySQL, mongo DB, elastic search etc.*  
-      > It is really tedious to manage a stateful set so databases normally will be hosted outside k8s
-      
+  - Stateful set *For application like databases such as mySQL, mongo DB, elastic search etc.*  **It is really tedious to manage a stateful set so databases normally will be hosted outside k8s**      
 # K8s architecture  
 ![k8s_architecture](./images/k8s_architecture.png)
   
