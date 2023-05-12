@@ -10,17 +10,17 @@
         Scalability and high performance
         Disaster recovery - backup and restore
 # K8s basic components
-  - Node *Worker node or master node*
-  - Pod *Small unit of k8s, abstraction over container, usually one application per Pod, each pod get its own internal ip address*
-  - Container *Can die easily and each time it will get a new ip address so it is not easy to manage here service comes up to solve this problem*
-  - Service *Internal or external service*
-  - Ingress *Forward request to service*
-  - Configmap *Configuration of service and others*
-  - Secret *Store confidential data and it just works like configmap*
-  - Volume for data storage *Database data or log data has to be persistent*
-  - Replica *Can be configured to create a replica pod*
-  - Deployment *All the pod or container will be created by deployment and replica will be configured within a deployment*
-  - Stateful set *For application like databases such as mySQL, mongo DB, elastic search etc.*  **It is really tedious to manage a stateful set so databases normally will be hosted outside k8s**      
+  - Node  (*Worker node or master node*)
+  - Pod (*Small unit of k8s, abstraction over container, usually one application per Pod, each pod get its own internal ip address*)
+  - Container (*Can die easily and each time it will get a new ip address so it is not easy to manage here service comes up to solve this problem*)
+  - Service (*Internal or external service*)
+  - Ingress (*Forward request to service*)
+  - Configmap 9*Configuration of service and others*)
+  - Secret (*Store confidential data and it just works like configmap*)
+  - Volume for data storage (*Database data or log data has to be persistent*)
+  - Replica (*Can be configured to create a replica pod*)
+  - Deployment (*All the pod or container will be created by deployment and replica will be configured within a deployment*)
+  - Stateful set (*For application like databases such as mySQL, mongo DB, elastic search etc.*)  **It is really tedious to manage a stateful set so databases normally will be hosted outside k8s**      
 # K8s architecture  
 ![k8s_architecture](./images/k8s_architecture.png)
   
