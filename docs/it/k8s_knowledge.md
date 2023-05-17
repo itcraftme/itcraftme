@@ -65,6 +65,9 @@ Start a cluster: `minikube start --vm-driver=hyperkit`
   - Get pod: `kubctl get pod`
   - Edit a deployment: `kubectl edit deployment nginx-deployment`
   - Delete a deployment: `kubectl delete deployment nginx-deployment` 
+  - Get status of different k8s components: `kubectl get nodes | pod | services | replicaset | deployment`
+  - Debug pods(*Log to console*): `kubectl logs [log name]`
+  - Debug pods (*Get interactive terminal*): `kubectl exec -it [pod name] --bin/bash` 
   - Apply a configuration for a deployment: `kubectl apply -f nginx-deployment.yaml`
   - Basic deploymnet config file:
     ```yml
