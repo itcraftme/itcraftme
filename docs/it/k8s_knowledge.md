@@ -56,8 +56,38 @@ Start a cluster: `minikube start --vm-driver=hyperkit`
     
 ## Kubectl
 ### What is kubectl?
-    It is a command line tool for k8s cluster
+   It is a command line tool for k8s cluster
         - CLI (kubectl) to talk to API server other than UI or API.
         - Kubectl is the tool for any cluster such as cloud cluster or hybrid cluster.
-
+### Kubectl basic commands
+  - Create a deployment: `kubectl deployment nginx-deployment --image=nginx`
+  - Get relicaset: `kubectl get replicaset`
+  - Get pod: `kubctl get pod`
+  - Edit a deployment: `kubectl edit deployment nginx-deployment`
+  - Delete a deployment: `kubectl delete deployment nginx-deployment` 
+  - Apply a configuration for a deployment: `kubectl apply -f nginx-deployment.yaml`
+  - Basic deploymnet config file:
+    ```yml
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: nginx-deployment
+      labels:
+        app: nginx
+    spec:
+      replicas: 2
+      selector:
+       matchLabels:
+          app: nginx
+      template:
+       metadata:
+          labels:
+            app: nginx
+        spec:
+          containers:
+          - name: nginx
+            image: nginx:1.16
+            ports:
+            - containerPort: 8080
+    ```
   
