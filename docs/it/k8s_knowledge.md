@@ -5,10 +5,10 @@
   - Developed by google
   - Helped you to manage containerized applications in different development environment (local,server,cloud or hybrid environment)
   - New trend of future development increased usage of container and it is really difficult to manage containers especially there are a lot of containers to be managed, so k8s comes up to solve this problem.
-  - K8s provide </br>
-    1.High availability or no downtime</br>
-    2.Scalability and high performance</br>
-    3.Disaster recovery or backup and restore</br>
+  - K8s provides 
+      High availability or no downtime. 
+      Scalability and high performance. 
+      Disaster recovery or backup and restore. 
 # K8s basic components
   - Node  (*Worker node or master node.*)
   - Pod (*Small unit of k8s, abstraction over container, usually one application per Pod, each pod get its own internal ip address.*)
@@ -24,21 +24,23 @@
 # K8s architecture  
 ![k8s_architecture](./images/k8s_architecture.png)
 ## Master processes 
-    - API Server 
-      It is like a cluster gateway and acts as a gatekeeper for authentication. 
-    - Scheduler 
-      Decides which worker node will be scheduled in an intelegient way and Kubelet in worker node will acutally schedule it.
-    - Controller Manager 
-      Detects state change such as pad dies and tells the schudler to notice it.
-    - etcd 
-      Key-value store for the cluster and application data is not stored here.
+### API Server
+    - is like a cluster gateway and acts as a gatekeeper for authentication. 
+### Scheduler 
+    - decides which worker node will be scheduled in an intelegient way and Kubelet in worker node will acutally schedule it.
+### Controller Manager 
+    - detects state change such as pad dies and tells the schudler to notice it.
+### etcd 
+    - is Key-value store for the cluster and application data is not stored here.
 ## Worker processes
-    - Kubelet 
-      Kubelet interacts with both the container and node.
-    - Kube Proxy
-      Forwarding request from node to node and avoilding the overhead of the network.
-    - Container runtime
-      Runtime for the container inside pod.
-  
+### Kubelet 
+    - interacts with both the container and node.
+### Kube Proxy
+    - will forward request from node to node and avoiding the overhead of network.
+### Container runtime
+    - is runtime for the containers inside pod.
+# Minikube & Kubectl
+## Minikube
+## Kubectl
 
   
