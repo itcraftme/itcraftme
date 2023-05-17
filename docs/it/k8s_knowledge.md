@@ -41,6 +41,22 @@
     - is runtime for the containers inside pod.
 # Minikube & Kubectl
 ## Minikube
+### What is minikube?
+    One node which has both master and worker processes running and has container runtime pre-installed.
+        - Creates virtual box on your labtop
+        - Node runs in that virtual box
+        - 1 Node k8s cluster
+        - For testing purposes
+### Installation of minikube
+    - Install hypervisor first.
+    - Install minikube and kubectl will be installed as well.
+### Minikube commands
+    - Start a cluster: `minikube start --vm-driver=hyperkit`
+    ![minikube start](./images/startminikube.png)
 ## Kubectl
+### What is kubectl?
+    It is a command line tool for k8s cluster
+        - CLI (kubectl) to talk to API server other than UI or API.
+        - Kubectl is the tool for any cluster such as cloud cluster or hybrid cluster.
 
   
