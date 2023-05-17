@@ -51,8 +51,9 @@
     - Install hypervisor first.
     - Install minikube and kubectl will be installed as well.
 ### Minikube commands
-    - Start a cluster: `minikube start --vm-driver=hyperkit`
-    ![minikube start](./images/startminikube.png)
+![minikube start](./images/startminikube.png)
+Start a cluster: `minikube start --vm-driver=hyperkit`
+    
 ## Kubectl
 ### What is kubectl?
     It is a command line tool for k8s cluster
