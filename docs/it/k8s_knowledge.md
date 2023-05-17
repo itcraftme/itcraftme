@@ -25,20 +25,20 @@
 ![k8s_architecture](./images/k8s_architecture.png)
 ## Master processes 
 ### API Server
-    - is like a cluster gateway and acts as a gatekeeper for authentication. 
+    - Is like a cluster gateway and acts as a gatekeeper for authentication. 
 ### Scheduler 
-    - decides which worker node will be scheduled in an intelegient way and Kubelet in worker node will acutally schedule it.
+    - Decides which worker node will be scheduled in an intelegient way and Kubelet in worker node will acutally schedule it.
 ### Controller Manager 
-    - detects state change such as pad dies and tells the schudler to notice it.
+    - Detects state change such as pad dies and tells the schudler to notice it.
 ### etcd 
-    - is Key-value store for the cluster and application data is not stored here.
+    - Is Key-value store for the cluster and application data is not stored here.
 ## Worker processes
 ### Kubelet 
-    - interacts with both the container and node.
+    - Interacts with both the container and node.
 ### Kube Proxy
-    - will forward request from node to node and avoiding the overhead of network.
+    - Will forward request from node to node and avoiding the overhead of network.
 ### Container runtime
-    - is runtime for the containers inside pod.
+    - Is runtime for the containers inside pod.
 # Minikube & Kubectl
 ## Minikube
 ### What is minikube?
