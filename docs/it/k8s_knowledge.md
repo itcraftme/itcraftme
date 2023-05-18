@@ -61,7 +61,7 @@ Start a cluster: `minikube start --vm-driver=hyperkit`
         - Kubectl is the tool for any cluster such as cloud cluster or hybrid cluster.
 ### Kubectl basic commands
   - Create a deployment: `kubectl deployment nginx-deployment --image=nginx`
-  - Get relicaset: `kubectl get replicaset`
+  - Get replicaset: `kubectl get replicaset`
   - Get pod: `kubctl get pod`
   - Edit a deployment: `kubectl edit deployment nginx-deployment`
   - Delete a deployment: `kubectl delete deployment nginx-deployment` 
@@ -69,7 +69,7 @@ Start a cluster: `minikube start --vm-driver=hyperkit`
   - Debug pods(*Log to console*): `kubectl logs [log name]`
   - Debug pods (*Get interactive terminal*): `kubectl exec -it [pod name] --bin/bash` 
   - Apply a configuration for a deployment: `kubectl apply -f nginx-deployment.yaml`
-  - Basic deploymnet config file:
+  - Basic deployment config file:
     ```yml
     apiVersion: apps/v1
     kind: Deployment
