@@ -115,6 +115,7 @@ metadata:
   uid: e1075fa3-6468-43d0-83c0-63fede0dae51
 ```
 ### specification
+
 ```yml
 spec:
   progressDeadlineSeconds: 600
@@ -151,6 +152,7 @@ spec:
       terminationGracePeriodSeconds: 30
 ```
 ### status (current status = or ！= desired status)
+
 ```yml
 status:
   availableReplicas: 2
@@ -177,6 +179,7 @@ status:
 ### selectors
 ### example
 #### service yaml
+
 ```yml
 apiVersion: v1
 kind: Service
@@ -191,6 +194,7 @@ spec:
       targetPort: 808
 ```
 #### deployment yaml
+
 ```yml
 apiVersion: apps/v1
 kind: Deployment
@@ -215,6 +219,7 @@ spec:
         - containerPort: 8080
 ```
 #### ingress yaml
+
 ```yml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
