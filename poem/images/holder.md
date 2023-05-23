@@ -1,8 +1,8 @@
 # First Poem
-![first poem](./images/1.png)
+![first poem](./1.png)
 
 # Second Poem
-![second poem](./images/2.png)
+![second poem](./2.png)
 
 # Third Poem
-![third poem](./images/3.png)
+![third poem](./3.png)
