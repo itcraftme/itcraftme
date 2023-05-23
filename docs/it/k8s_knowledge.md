@@ -494,7 +494,7 @@ spec:
           values:
           - example-node
 ```
-## Pods with colume
+## Pods with volume
 ```yml
 apiVersion: v1
 kind: Pod
