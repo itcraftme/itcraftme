@@ -361,3 +361,215 @@ spec:
       targetPort: 8081
       nodePort: 30000
 ```
+# K8s namespaces
+
+# Package manager - helm
+
+# Persistent data in K8s with volumes
+## deployment with multiple volumes 
+
+```yml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elastic
+spec:
+  selector:
+    matchLabels:
+      app: elastic
+  template:
+    metadata:
+      labels:
+        app: elastic
+    spec:
+      containers:
+      - image: elastic:latest
+        name: elastic-container
+        ports:
+        - containerPort: 9200
+        volumeMounts:
+        - name: es-persistent-storage
+          mountPath: /var/lib/data
+        - name: es-secret-dir
+          mountPath: /var/lib/secret
+        - name: es-config-dir
+          mountPath: /var/lib/config
+      volumes:
+      - name: es-persistent-storage
+        persistentVolumeClaim:
+          claimName: es-pv-claim
+      - name: es-secret-dir
+        secret:
+          secretName: es-secret 
+      - name: es-config-dir
+        configMap:
+          name: es-config-map
+```
+## Persistent volume claims
+```yml
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pvc-name
+spec:
+  storageClassName: manual
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+     name: mypvc
+spec:
+     accessModes:
+     - ReadWriteOnce
+     resources:
+       requests:
+         storage: 100Gi
+     storageClassName: storage-class-name
+```
+## Persistent volumes
+```yml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-name
+spec:
+  capacity:
+    storage: 5Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Recycle
+  storageClassName: slow
+  mountOptions:
+    - hard
+    - nfsvers=4.0
+  nfs:
+    path: /dir/path/on/nfs/server
+    server: nfs-server-ip-address
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: test-volume
+  labels:
+    failure-domain.beta.kubernetes.io/zone: us-central1-a__us-central1-b
+spec:
+  capacity:
+    storage: 400Gi
+  accessModes:
+  - ReadWriteOnce
+  gcePersistentDisk:
+    pdName: my-data-disk
+    fsType: ext4
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: example-pv
+spec:
+  capacity:
+    storage: 100Gi
+  volumeMode: Filesystem
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Delete
+  storageClassName: local-storage
+  local:
+    path: /mnt/disks/ssd1
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - example-node
+```
+## Pods with colume
+```yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+    - name: myfrontend
+      image: nginx
+      volumeMounts:
+      - mountPath: "/var/www/html"
+        name: mypd
+  volumes:
+    - name: mypd
+      persistentVolumeClaim:
+        claimName: pvc-name
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+    - name: busybox-container
+      image: busybox
+      volumeMounts:
+        - name: config-dir
+          mountPath: /etc/config
+  volumes:
+    - name: config-dir
+      configMap:
+        name: bb-configmap
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+  - name: busybox-container
+    image: busybox
+    volumeMounts:
+    - name: secret-dir
+      mountPath: /etc/secret
+      readOnly: true
+  volumes:
+  - name: secret-dir
+    secret:
+      secretName: bb-secret
+```
+## Storage class
+```yml
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: storage-class-name
+provisioner: kubernetes.io/aws-ebs
+parameters:
+  type: io1
+  iopsPerGB: "10"
+  fsType: ext4
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+     name: mypvc
+spec:
+     accessModes:
+     - ReadWriteOnce
+     resources:
+       requests:
+         storage: 100Gi
+     storageClassName: storage-class-name
+```
+# Deploy stateful apps with statefulsets
