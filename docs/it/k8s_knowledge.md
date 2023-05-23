@@ -151,7 +151,7 @@ spec:
       securityContext: {}
       terminationGracePeriodSeconds: 30
 ```
-### status (current status = or ！= desired status)
+### status (current status == or ！= desired status)
 
 ```yml
 status:
@@ -382,7 +382,7 @@ Use namespaces to define resource policies for different users, teams, or custom
 ### Kube-node-lease
 - Heartbeats of nodes
 - Each node has associated lease object in namespace
-- Determines the **avalability of a node
+- Determines the avalability of a node
 ### default
 - Resources you create are located here
 ## Create new namespace 
@@ -396,7 +396,7 @@ metadata:
   name: [namespace-name]
 ```
 # Package manager - helm
-
+- Coming later
 # Persistent data in K8s with volumes
 ## Deployment with multiple volumes 
 
@@ -605,3 +605,4 @@ spec:
      storageClassName: storage-class-name
 ```
 # Deploy stateful apps with statefulsets
+- coming later
