@@ -366,7 +366,7 @@ spec:
 # Package manager - helm
 
 # Persistent data in K8s with volumes
-## deployment with multiple volumes 
+## Deployment with multiple volumes 
 
 ```yml
 apiVersion: apps/v1
