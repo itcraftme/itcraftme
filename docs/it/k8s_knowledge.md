@@ -93,4 +93,146 @@ Start a cluster: `minikube start --vm-driver=hyperkit`
             ports:
             - containerPort: 8080
     ```
-  
+# K8s yaml configuration file explanation
+## 3 parts of configuration file
+### metadata
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"labels":{"app":"nginx"},"name":"nginx-deployment","namespace":"default"},"spec":{"replicas":2,"selector":{"matchLabels":{"app":"nginx"}},"template":{"metadata":{"labels":{"app":"nginx"}},"spec":{"containers":[{"image":"nginx:1.16","name":"nginx","ports":[{"containerPort":8080}]}]}}}}
+  creationTimestamp: "2020-01-24T10:54:56Z"
+  generation: 1
+  labels:
+    app: nginx
+  name: nginx-deployment
+  namespace: default
+  resourceVersion: "96574"
+  selfLink: /apis/apps/v1/namespaces/default/deployments/nginx-deployment
+  uid: e1075fa3-6468-43d0-83c0-63fede0dae51
+```
+### specification
+```
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 2
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: nginx
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - image: nginx:1.16
+        imagePullPolicy: IfNotPresent
+        name: nginx
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+```
+### status (current status = or ！= desired status)
+```
+status:
+  availableReplicas: 2
+  conditions:
+  - lastTransitionTime: "2020-01-24T10:54:59Z"
+    lastUpdateTime: "2020-01-24T10:54:59Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2020-01-24T10:54:56Z"
+    lastUpdateTime: "2020-01-24T10:54:59Z"
+    message: ReplicaSet "nginx-deployment-7d64f4b574" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  observedGeneration: 1
+  readyReplicas: 2
+  replicas: 2
+  updatedReplicas: 2
+```
+## Connecting deployments to Service to Pods
+### labels
+### selectors
+### example
+#### service yaml
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 808
+```
+#### deployment yaml
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.16
+        ports:
+        - containerPort: 8080
+```
+#### ingress yaml
+```
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: dashboard-ingress
+  namespace: kubernetes-dashboard
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+  - host: dashboard.com
+    http:
+      paths:
+      - path: /
+        pathType: Exact  
+        backend:
+          service:
+            name: kubernetes-dashboard
+            port: 
+              number: 80
+```
