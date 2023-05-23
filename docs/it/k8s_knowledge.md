@@ -362,7 +362,39 @@ spec:
       nodePort: 30000
 ```
 # K8s namespaces
+## Introduction
+A Kubernetes namespace is a logical separator of cluster resources. Namespaces allow administrators to organize, group, structure and allocate resources and Kubernetes objects to ensure smooth cluster operation. One Kubernetes cluster can hold multiple namespaces, all logically isolated from each other.
+Use namespaces to define resource policies for different users, teams, or customers or set up role-based access control.
 
+## Default namespaces
+
+![namespace](./images/k8s_namespace.png)
+
+### Kube-dashboard
+-Shiped automatically with minikube (specified with minikube)
+### Kube-system
+- DO NOT create or modify in kube-system
+- System processes
+- Master and Kubectl processes
+### Kube-public
+- Publicely accessible data
+- A configmap, which contains cluster information
+### Kube-node-lease
+- Heartbeats of nodes
+- Each node has associated lease object in namespace
+- Determines the **avalability of a node
+### default
+- Resources you create are located here
+## Create new namespace 
+### Command: `kubectl create namespace [namespace]`
+### Using configuration 
+
+```yml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: [namespace-name]
+```
 # Package manager - helm
 
 # Persistent data in K8s with volumes
