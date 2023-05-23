@@ -371,7 +371,7 @@ Use namespaces to define resource policies for different users, teams, or custom
 ![namespace](./images/k8s_namespace.png)
 
 ### Kube-dashboard
--Shiped automatically with minikube (specified with minikube)
+- Shiped automatically with minikube (specified with minikube)
 ### Kube-system
 - DO NOT create or modify in kube-system
 - System processes
