@@ -1,2 +1,2 @@
 # Content
-All the vacabularies that I am not familiar with.
+All the vocabularies that I am not familiar with.
