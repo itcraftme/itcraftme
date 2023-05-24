@@ -6,3 +6,5 @@
 - use [directory] as a repository
 ### git init --bare directory
 - use [directory] as a empty repository
+# Git commit
+## Basic command: 'git commit [file1] [file2] ... -m [message]'
