@@ -8,6 +8,7 @@ layout: default
 ## [Knlowledge of Linux](https://linux265.com/course/)
 # Craft
 # Me
+## [English vocabularies](./docs/me/vocabulary.md)
 # Poem
 ## [Poems in a row](./poem/images/holder.md)
 ## [What I want](./poem/4th.md)
