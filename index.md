@@ -6,6 +6,7 @@ layout: default
 ## [Knowledge of k8s](./docs/it/k8s_knowledge.md)
 ## [Knowledge of markdown language](./docs/it/markdown_knowledge.md)
 ## [Knlowledge of Linux](https://linux265.com/course/)
+## [Knowledge of powershell](./docs/it/powershell.md)
 # Craft
 # Me
 ## [English vocabularies](./docs/me/vocabulary.md)
