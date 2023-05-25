@@ -1,5 +1,5 @@
 title: Yan's world.
 description: Fullfilled life with IT job, craft hobby and happy me.
 show_downloads: false
-google_analytics:
+google_analytics:true
 theme: jekyll-theme-architect
