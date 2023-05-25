@@ -10,6 +10,7 @@ layout: default
 # Craft
 ## [Leather phone case](./docs/craft/phonecase.md)
 # Me
+## [China history](./docs/me/history.md)
 ## [English vocabularies](./docs/me/vocabulary.md)
 # Poem
 ## [Poems in a row](./poem/images/holder.md)
