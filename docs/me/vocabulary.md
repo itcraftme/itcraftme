@@ -7,8 +7,8 @@ All the vocabularies that I am not familiar with.
 ### 解释
 n.	(知识、技能等的)获得，得到; (多指贵重的)购得物; 购置物; 收购的公司; 购置的产业; 购置; 收购;
 ### 例句
-Knowledge acquisition is to students as production is to workers.
-获得知识对于学生来说就像生产对于工人一样重要。
+Real-time data acquisition and data processing is the key issue of measuring system.
+实时数据采集与处理是测量系统中的一个关键问题。
 ### 复数
 acquisitions
 # integrity
@@ -22,4 +22,5 @@ For me integrity is the consistency of words and actions.
 对我来说，诚实正直就是言行合一。
 ### 复数
 integrities
+
 
