@@ -35,3 +35,11 @@ Write-Host "Check how break works in powershell"
 2
 Check how break works in powershell
 ```
+## A tricky way to convert string to object
+#### code
+```
+$ht = ("{`""+"a=1;b=2".Replace(";","`",`"").Replace("=","`":`"")+"`"}") | ConvertFrom-Json
+$ht.a
+```
+#### output
+1
