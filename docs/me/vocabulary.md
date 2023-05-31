@@ -22,5 +22,15 @@ For me integrity is the consistency of words and actions.
 对我来说，诚实正直就是言行合一。
 ### 复数
 integrities
+# illustrations
+### 音标
+英[ˌɪləsˈtreɪʃənz]
+美[ˌɪləˈstreɪʃənz]
+### 解释
+(书、杂志等中的)图表，插图; 图解; 图示; 例释; (说明事实的)故事，实例，示例;
+### 例句
+On the demands of the illustrations and tables in social science papers
+### 复数
+illustrations
 
 
