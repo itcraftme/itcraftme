@@ -46,31 +46,17 @@ $ht.a
 
 ### Hash with MD5
 #### Code
+
 ```powershell
 (Get-FileHash $_.FullName -Algorithm MD5).Hash
 ```
 #### Output
-Something like this:
 1BC0CE544888AD95BC9587EFE95159CE
 #### Code
+
 ```powershell
 $hasher=[System.Security.Cryptography.HashAlgorithm]::Create('MD5')
-$hashMD5=$hasher.ComputeHash([System.Text.Encoding]::UTF8.GetBytes("testing"))
+[String]$hasher.ComputeHash([System.Text.Encoding]::UTF8.GetBytes("testing"))
 ```
 #### Output
-174
-43
-31
-202
-81
-89
-73
-229
-213
-79
-178
-43
-142
-217
-85
-117
+174 43 31 202 81 89 73 229 213 79 178 43 142 217 85 117
