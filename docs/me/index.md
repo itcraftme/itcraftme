@@ -1,8 +1,8 @@
 ---
 layout: default
 ---
-#  [Home](../../index.md)
-## [China history](./history.md)
-## [English vocabularies](./vocabulary.md)
-## [Pick ups](./pickups.md)
-## [UK visa](./UKVisa.md)
+###  [Home](../../index.md)
+# [China history](./history.md)
+# [English vocabularies](./vocabulary.md)
+# [Pick ups](./pickups.md)
+# [UK visa](./UKVisa.md)
