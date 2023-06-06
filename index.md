@@ -2,7 +2,8 @@
 layout: default
 ---
 # [IT](./docs/it/index.md)
-
+  I am working as an software developer in test and I am sharing some of the experience and the new technologies I am still studying ...
 # [Craft](./docs/craft/index.md)
-
+  I love handcraft activities like knitting, leather craft, sewing, crocheting ...
 # [Me](./docs/me/index.md)
+  I am sharing my daily life  and something I pick up everyday for future reference, history, english vocabolary and so on ...
