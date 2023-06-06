@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-###  [Home](../../index.md)
+###  [<< back home](../../index.md)
 ## [China history](./history.md)
 ## [English vocabularies](./vocabulary.md)
 ## [Pick ups](./pickups.md)
