@@ -1,11 +1,13 @@
-# Content
+## Content
+
   This part contains the knowledge of regular expressions and [here](https://www.youtube.com/watch?v=sa-TUpSx1JA) is the video I followed in Youtube
-# Basic knowledge
+  
+## Basic knowledge
 
 | Character | Meaning | Example
 | :---- | :---- | :---- 
-| .  |  Any character except new line  |  
-|[]  |  Matches characters in brackets  |
+| .  |  Any character except new line    
+|[]  |  Matches characters in brackets  
 | () |    Group  
 |[^ ] |   Matches characters not in bracket  
 |  $  |   End of a string  
@@ -26,8 +28,8 @@
 | {3,4}  | Range of numbers (Minimum, Maxinum)
 | \ |  Escape character
 
-# Example
+## Example
 
 | Powershell Code | Result
 | :---- | :----
-|       |
+
