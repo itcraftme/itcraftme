@@ -1,4 +1,4 @@
-# Content
+# content
 All the vocabularies that I am not familiar with.
 ## acquisition
 ### 音标
@@ -32,5 +32,19 @@ integrities
 On the demands of the illustrations and tables in social science papers
 ### 复数
 illustrations
-
+# parenthese & brackets-curly & brackets
+## parentheses 小括号；圆括号（复数）
+英[pəˈrɛnθɪsiːz]
+美[pəˈrɛnθəˌsiz]
+Make sure to read what's in parentheses.
+### open / close parenthesis 左小括号/右小括号
+英[pəˈrenθəsɪs]
+美[pəˈrenθəsɪs]
+Write this down: all new students will need to come to the Conference Hall, open parenthesis, Room 202, close parenthesis.
+## brackets 中括号；方括号
+We type suggestions between brackets to distinguish them from the regular text.
+## curly brackets 大括号
+The curly brackets contain a translation of the Spanish terms in the article.
+### opening / closing braces 左大括号/右大括号
+Make sure to put opening and closing braces around the equation.
 
