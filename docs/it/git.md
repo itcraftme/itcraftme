@@ -1,4 +1,4 @@
-###  [<< back home](./index.md)
+###  [<< back](./index.md)
 # Git init
 ## Basic command: `git init [--bare] [directory]`
 ### git init
