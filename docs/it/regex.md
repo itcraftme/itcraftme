@@ -4,8 +4,8 @@
   
 ## Basic knowledge
 
-| Character | Meaning | Example
-| :---- | :---- | :---- 
+| Character | Meaning 
+| :----  | :---- 
 | .  |  Any character except new line    
 |[]  |  Matches characters in brackets  
 | () |    Group  
@@ -28,8 +28,4 @@
 | {3,4}  | Range of numbers (Minimum, Maxinum)
 | \ |  Escape character
 
-## Example
-
-| Powershell Code | Result
-| :---- | :----
 
