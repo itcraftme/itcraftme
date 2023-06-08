@@ -1,6 +1,7 @@
 # Content
   This part contains the knowledge of regular expressions and [here](https://www.youtube.com/watch?v=sa-TUpSx1JA) is the video I followed in Youtube
 # Basic knowledge
+
 | Character | Meaning | Example
 | :---- | :---- | :---- 
 | .  |  Any character except new line  |  
@@ -8,9 +9,9 @@
 | () |    Group  
 |[^ ] |   Matches characters not in bracket  
 |  $  |   End of a string  
-|  \| |   or
-|  ?  |   Any one character
-|  *  |   Wild match
+|  \| |   Or
+|  ?  |   Zero or one
+|  *  |   Zero or more
 |  +  |   One or More
 | \d  |    Digit (0-9)
 | \D   |   Not digit (0-9)
@@ -21,7 +22,12 @@
 | \b  |   Word boundary 
 | \B  |   Not word boundary 
 | ^  |   Beginning of a string 
+| {3}  |   Exact number
+| {3,4}  | Range of numbers (Minimum, Maxinum)
+| \ |  Escape character
 
 # Example
+
 | Powershell Code | Result
 | :---- | :----
+|       |
