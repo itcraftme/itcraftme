@@ -1,4 +1,4 @@
-###  [<< back home](./index.md)
+###  [<< back](./index.md)
 # 历史图表
 ![history](./images/cnhistory.png)
 # 具体朝代年份
