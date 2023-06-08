@@ -1,4 +1,4 @@
-###  [<< back home](./index.md)
+###  [<< back](./index.md)
 # K8s knowledge
   Learned from youtube posted by nana  [k8s video](https://www.youtube.com/watch?v=X48VuDVv0do)  
 # Overview of k8s
