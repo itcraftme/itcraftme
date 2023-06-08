@@ -1,3 +1,4 @@
+###  [<< back home](./index.md)
 # Knowledge for linux
 
 ## A good link for linux studying 
