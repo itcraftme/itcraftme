@@ -52,4 +52,13 @@ We type suggestions between brackets to distinguish them from the regular text.
 The curly brackets contain a translation of the Spanish terms in the article.
 ### opening / closing braces 左大括号/右大括号
 Make sure to put opening and closing braces around the equation.
-
+# compensation
+### 音标
+英[ˌkɒmpenˈseɪʃn]
+美[ˌkɑːmpenˈseɪʃn]
+### 解释
+(对不利局面的)补偿; 赔偿; 补偿(或赔偿)物; (尤指)赔偿金; 补偿金; 使坏的情况变好的事物;
+### 例句
+The company was ordered to pay compensation to its former employees.
+### 复数
+compensations
