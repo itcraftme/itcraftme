@@ -29,4 +29,19 @@
 | {3,4}  | Range of numbers (Minimum, Maxinum)
 | \ |  Escape character
 
-
+## Regex with powershell
+- To get time from a string and convert it to DateTime
+### Code
+```
+$str = "Host.Service_2023-06-07_05-39-24.log"
+$bMatch = $str -match "Host\.Service_(?<time>.*)\.log"
+if($bMatch)
+{
+    $hosttime = [datetime]::parseexact($Matches.time, 'yyyy-MM-dd_HH-mm-ss', $null)
+    Write-Host "Host Time:$hosttime"  
+}
+```
+### Output
+```
+Host Time:06/07/2023 05:39:24
+```
