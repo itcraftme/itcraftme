@@ -68,14 +68,14 @@
 
 # 时柱的计算方法
  - 地支每日不变
-    ![image](./images/rizhu.png)
+    -   ![image](./images/rizhu.png)
     
  - 推出天干地方法
     -  通过“日上起时表”直接查询每日时辰的天干。
     -  通过“五鼠遁诀”推出时干。
     -  可以用“逢龙即化诀”推出时干。
  - 日上起时表
-    ![image](./images/rishangqishitable.png)
+   -   ![image](./images/rishangqishitable.png)
 
 # 干支与五行方位的对应
-  ![Image](./images/tiangandizhi.png)
+  -   ![Image](./images/tiangandizhi.png)
