@@ -22,3 +22,5 @@
   ($year-3)%10 = 6(巳)
   所以1977是《丁巳》年
   ```
+  # 干支与五行方位的对应
+  ![Image](./images/tiangandizhi.png)
