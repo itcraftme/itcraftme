@@ -61,3 +61,15 @@ $hasher=[System.Security.Cryptography.HashAlgorithm]::Create('MD5')
 ```
 #### Output
 174 43 31 202 81 89 73 229 213 79 178 43 142 217 85 117
+### Start-Process with credential
+```
+ $credentail = [System.Management.Automation.PSCredential]::new("username",(ConvertTo-SecureString -String "password" -AsPlainText -Force))
+ start-process -FilePath powershell -ArgumentList "Stop-Process -Name MaxwellServiceMonitor -force;sleep(60)" -Credential $credentail
+```
+### Start-Process with space in path
+```
+ $command = 'dir "c:\program files";sleep(30)'
+ $bytes = [System.Text.Encoding]::Unicode.GetBytes($command)
+ $encodedCommand = [Convert]::ToBase64String($bytes)
+ start-process -FilePath powershell -ArgumentList "-encodedCommand $encodedCommand"
+```
