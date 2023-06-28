@@ -57,7 +57,11 @@ git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [-
   ```
   git add hello.c hello.h
   ```
-# Git with branch 
+- Add all the changes to the context
+  ```
+  git add --all
+  ```
+# Git check out branch 
 Ask for help: `git checkout --help`
 ## Basic command
 ```
@@ -89,3 +93,12 @@ git push [--all | --mirror | --tags] [--follow-tags] [--atomic] [-n | --dry-run]
 ```
 git push origin <branch>
 ```
+# Git working with branch
+```
+- git branch  //list all the branches in local working director
+- git checkout <branch> //working on this branch
+- git branch -d <branch>  //delete local branch
+- git push origin -d <branch>   //delete remote branch
+```
+# Git merge
+[Link](https://blog.csdn.net/All_In_gzx_cc/article/details/125482617)
