@@ -102,3 +102,7 @@ git push origin <branch>
 ```
 # Git merge
 [Link](https://blog.csdn.net/All_In_gzx_cc/article/details/125482617)
+# Git create branch
+```
+git checkout -b <branchname> <origin/branchname>
+```
