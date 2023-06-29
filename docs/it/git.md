@@ -106,3 +106,8 @@ git push origin <branch>
 ```
 git checkout -b <branchname> <origin/branchname>
 ```
+# Push local branch to remote
+```
+git checkout -b <new branch name>
+git push -u origin <new branch name>
+```
