@@ -81,6 +81,7 @@ git checkout <branch>
 # Git push 
 Ask for help: `git push --help`
 ## Basic command
+
 ```
 git push [--all | --mirror | --tags] [--follow-tags] [--atomic] [-n | --dry-run] [--receive-pack=<git-receive-pack>]
 	   [--repo=<repository>] [-f | --force] [-d | --delete] [--prune] [-v | --verbose]
@@ -90,10 +91,12 @@ git push [--all | --mirror | --tags] [--follow-tags] [--atomic] [-n | --dry-run]
 	   [--no-verify] [<repository> [<refspec>…​]]
 ```
 ## Example
+
 ```
 git push origin <branch>
 ```
 # Git working with branch
+
 ```
 - git branch  //list all the branches in local working director
 - git checkout <branch> //working on this branch
@@ -101,12 +104,15 @@ git push origin <branch>
 - git push origin -d <branch>   //delete remote branch
 ```
 # Git merge
+
 [Link](https://blog.csdn.net/All_In_gzx_cc/article/details/125482617)
 # Git create branch
+
 ```
 git checkout -b <branchname> <origin/branchname>
 ```
 # Push local branch to remote
+
 ```
 git checkout -b <new branch name>
 git push -u origin <new branch name>
