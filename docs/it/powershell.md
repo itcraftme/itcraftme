@@ -84,7 +84,7 @@ Write-Output "COMPUTER : $computer "
 Write-Output "CLASS    : $classname "
 Write-Output "====================================="
 
-$pwd = ConvertTo-SecureString -String "anadrill" -AsPlainText -Force
-$cred = [System.Management.Automation.PSCredential]::new("Ideal",$pwd)
+$pwd = ConvertTo-SecureString -String "password" -AsPlainText -Force
+$cred = [System.Management.Automation.PSCredential]::new("user",$pwd)
 Get-WmiObject -Class $classname -ComputerName $computer -Namespace $namespace -Credential $cred | where-object {($_.Name -like "*eWafe*") -or ($_.Name -like "*HSPM*") -or ($_.Name -like "*SQL Server*Database Engine Service*") -or ($_.Name -like "*Maxwell*")}
 ```
