@@ -73,3 +73,18 @@ $hasher=[System.Security.Cryptography.HashAlgorithm]::Create('MD5')
  $encodedCommand = [Convert]::ToBase64String($bytes)
  start-process -FilePath powershell -ArgumentList "-encodedCommand $encodedCommand"
 ```
+### Working with WMI
+```
+$computer = "MCMP-TBA-10001"
+$namespace = "ROOT\CIMV2"
+$classname = "Win32_Product"
+
+Write-Output "====================================="
+Write-Output "COMPUTER : $computer "
+Write-Output "CLASS    : $classname "
+Write-Output "====================================="
+
+$pwd = ConvertTo-SecureString -String "anadrill" -AsPlainText -Force
+$cred = [System.Management.Automation.PSCredential]::new("Ideal",$pwd)
+Get-WmiObject -Class $classname -ComputerName $computer -Namespace $namespace -Credential $cred | where-object {($_.Name -like "*eWafe*") -or ($_.Name -like "*HSPM*") -or ($_.Name -like "*SQL Server*Database Engine Service*") -or ($_.Name -like "*Maxwell*")}
+```
