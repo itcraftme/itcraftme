@@ -125,3 +125,8 @@ git config --global user.name [username] //set user name
 git config --global user.email [email] //set email
 git config --system --unset credential.helper //unset credential.helper so that it will pop up prompt to ask for password
 ```
+# git update
+
+```
+git update-git-for-windows
+```
