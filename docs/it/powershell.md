@@ -88,3 +88,7 @@ $pwd = ConvertTo-SecureString -String "password" -AsPlainText -Force
 $cred = [System.Management.Automation.PSCredential]::new("user",$pwd)
 Get-WmiObject -Class $classname -ComputerName $computer -Namespace $namespace -Credential $cred | where-object {($_.Name -like "*any*") -or ($_.Name -like "*anything*") -or ($_.Name -like "*SQL Server*Database Engine Service*") -or ($_.Name -like "*anythingthere*")}
 ```
+## Get size of a folder
+```
+((Get-ChildItem $path -Recurse | Measure-Object -Property Length -Sum -ErrorAction Stop).Sum / 1MB)
+```
