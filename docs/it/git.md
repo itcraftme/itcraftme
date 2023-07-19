@@ -1,13 +1,25 @@
 ###  [<< back](./index.md)
-# Git init
+# git init
 ## Basic command: `git init [--bare] [directory]`
 ### git init
 - use current directory as a repository
+  
 ### git init directory
 - use [directory] as a repository
+  
 ### git init --bare directory
 - use [directory] as a empty repository
-# Git commit
+
+# git config
+
+```
+git config --list
+git config --global user.name [username] //set user name
+git config --global user.email [email] //set email
+git config --system --unset credential.helper //unset credential.helper so that it will pop up prompt to ask for password
+```
+
+# git commit
 ## Basic command: `git commit [file1] [file2] ... -m [message]`
 ### Examples
 - Edit, remove and add and commit: 
@@ -39,7 +51,8 @@ GIT_COMMITTER_NAME
 GIT_COMMITTER_EMAIL
 GIT_COMMITTER_DATE
 ```
-# Git add  
+
+# git add  
 Ask for help: `git add --help`
 ## Basic command:
 ```
@@ -61,6 +74,7 @@ git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [-
   ```
   git add --all
   ```
+  
 # Git check out branch 
 Ask for help: `git checkout --help`
 ## Basic command
@@ -78,7 +92,8 @@ git checkout (-p|--patch) [<tree-ish>] [--] [<paths>…​]
 ```
 git checkout <branch>
 ```
-# Git push 
+
+# git push 
 Ask for help: `git push --help`
 ## Basic command
 
@@ -95,7 +110,8 @@ git push [--all | --mirror | --tags] [--follow-tags] [--atomic] [-n | --dry-run]
 ```
 git push origin <branch>
 ```
-# Git working with branch
+
+# git working with branch
 
 ```
 - git branch  //list all the branches in local working director
@@ -103,30 +119,37 @@ git push origin <branch>
 - git branch -d <branch>  //delete local branch
 - git push origin -d <branch>   //delete remote branch
 ```
-# Git merge
+
+# git merge
 
 [Link](https://blog.csdn.net/All_In_gzx_cc/article/details/125482617)
-# Git create branch
+
+# git create branch
 
 ```
 git checkout -b <branchname> <origin/branchname>
 ```
-# Push local branch to remote
+# push local branch to remote
 
 ```
 git checkout -b <new branch name>
 git push -u origin <new branch name>
 ```
-# git config
 
-```
-git config --list
-git config --global user.name [username] //set user name
-git config --global user.email [email] //set email
-git config --system --unset credential.helper //unset credential.helper so that it will pop up prompt to ask for password
-```
 # git update
 
 ```
 git update-git-for-windows
+```
+
+# git restore
+
+```
+git restore [FileName] //Revert changes in current branch
+```
+
+# git pull
+
+```
+git pull <remote> <branch>
 ```
