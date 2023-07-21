@@ -62,3 +62,13 @@ Make sure to put opening and closing braces around the equation.
 The company was ordered to pay compensation to its former employees.
 ### 复数
 compensations
+# canary
+### 音标
+英[kəˈneəri]
+美[kəˈneri]
+### 解释
+金丝雀; 淡黄色，鲜黄色; <俚>告密者; 加那利白葡萄酒 ( 原产于加那利群岛 ); <俚> ( 有乐队伴奏的 ) 女歌手;
+### 例句
+The canary was trilling away happily.
+### 复数：
+canaries
