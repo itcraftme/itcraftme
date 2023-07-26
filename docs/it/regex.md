@@ -32,7 +32,7 @@
 ## Regex with powershell
 - To get time from a string and convert it to DateTime
 ### Code
-```
+``` powershell
 $str = "Host.Service_2023-06-07_05-39-24.log"
 $bMatch = $str -match "Host\.Service_(?<time>.*)\.log"
 if($bMatch)
@@ -42,6 +42,6 @@ if($bMatch)
 }
 ```
 ### Output
-```
+``` 
 Host Time:06/07/2023 05:39:24
 ```
