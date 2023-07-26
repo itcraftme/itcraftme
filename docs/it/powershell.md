@@ -92,3 +92,67 @@ Get-WmiObject -Class $classname -ComputerName $computer -Namespace $namespace -C
 ```powershell
 ((Get-ChildItem $path -Recurse | Measure-Object -Property Length -Sum -ErrorAction Stop).Sum / 1MB)
 ```
+## Working with WMI
+``` powershell
+$csvFile =".\ComputerName.csv"
+$outputFile = ".\ComputerStatus.csv"
+$existed = Test-Path $outputFile
+if ($existed)
+{
+    remove-item -Path $outputFile
+}
+Add-Content -Path $outputFile "Computer,IP,Maxwell,EWafe,SQL"
+
+Function GetNetWorkConfig{
+    param([string]$computer)
+    $namespace = "ROOT\CIMV2"
+    $classname = "Win32_NetworkAdapterConfiguration"
+    $network = WMILib $computer $namespace $classname |  where-object {($_.Description -notlike "*Hyper-V*")}
+    $network.IPAddress
+}
+
+Function GetAppVersion{
+    param([string]$computer)
+    $namespace = "ROOT\CIMV2"
+    $classname = "Win32_Product"
+    WMILib $computer $namespace $classname | where-object {($_.Name -like "*eWafe*") -or ($_.Name -like "*HSPM*") -or ($_.Name -like "*SQL Server*Database Engine Service*") -or ($_.Name -like "*Maxwell*")}
+}
+
+Function WMILib {
+    param([string]$computer, [string]$namespace,[string]$classname)
+    $pwd = ConvertTo-SecureString -String "password" -AsPlainText -Force
+    $cred = [System.Management.Automation.PSCredential]::new("username",$pwd)
+    Get-WmiObject -Class $classname -ComputerName $computer -Namespace $namespace -Credential $cred 
+}
+
+Function main{
+    $query = Import-Csv -path $csvFile 
+    $query.ComputerName | ForEach-Object -Process{
+        if((Test-NetConnection -ComputerName $_).pingSucceeded)
+        {
+            Write-Host $_
+            $IP = GetNetWorkConfig $_ 
+            $Versions = GetAppVersion $_
+            $Version = ($Versions | where-object {$_.Name -like "*somekeyword*"}).Version
+            $SQLVersion = ($Versions | where-object {$_.Name -like "*somekeyword*"})[0].Name
+            $WVersion = ($Versions | where-object {$_.Name -like "*somekeyword*"}).Name
+            Add-Content -Path $outputFile ($_ + "," + $IP + "," + $Version + "," + $WVersion + "," + $SQLVersion)
+       }
+       else
+       {
+            Add-Content -Path $outputFile ($_ + "," + "Offline" + "," + "Null" + "," + "Null" + "," + "Null")
+       }
+    }
+}
+
+main
+```
+## Execute command in a remote machine
+``` powershell
+$DCOM = New-CimSessionOption -Protocol Dcom
+$pwd = ConvertTo-SecureString -String "password" -AsPlainText -Force
+$Cred = [pscredential]::new("username",$pwd)
+$CimSession = New-CimSession -ComputerName 192.168.83.18 -SessionOption $DCOM -Credential $Cred
+#Get-CimInstance -CimSession $CimSession -ClassName Win32_BIOS
+$app = Invoke-CimMethod -CimSession $CimSession -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine = "cmd.exe /c C:\Temp\abc.bat" }
+```
