@@ -101,7 +101,7 @@ if ($existed)
 {
     remove-item -Path $outputFile
 }
-Add-Content -Path $outputFile "Computer,IP,Maxwell,EWafe,SQL"
+Add-Content -Path $outputFile "Computer,IP,App1,App2,App3"
 
 Function GetNetWorkConfig{
     param([string]$computer)
@@ -115,7 +115,7 @@ Function GetAppVersion{
     param([string]$computer)
     $namespace = "ROOT\CIMV2"
     $classname = "Win32_Product"
-    WMILib $computer $namespace $classname | where-object {($_.Name -like "*eWafe*") -or ($_.Name -like "*HSPM*") -or ($_.Name -like "*SQL Server*Database Engine Service*") -or ($_.Name -like "*Maxwell*")}
+    WMILib $computer $namespace $classname | where-object {($_.Name -like "*something*") -or ($_.Name -like "*something*") -or ($_.Name -like "*SQL Server*Database Engine Service*") -or ($_.Name -like "*something*")}
 }
 
 Function WMILib {
