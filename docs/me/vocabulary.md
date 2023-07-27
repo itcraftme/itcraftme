@@ -70,5 +70,16 @@ compensations
 金丝雀; 淡黄色，鲜黄色; <俚>告密者; 加那利白葡萄酒 ( 原产于加那利群岛 ); <俚> ( 有乐队伴奏的 ) 女歌手;
 ### 例句
 The canary was trilling away happily.
-### 复数：
+### 复数
 canaries
+# marshal
+### 音标
+英[ˈmɑːʃl]
+美[ˈmɑːrʃl]
+### 解释
+n.	元帅; (英国)陆军元帅; (美国法院的)执行官; 警察局长，消防局长; 空军元帅; 司仪; 典礼官;
+vt.	组织; 安排; 收集; 维持秩序; 结集; 控制人群;
+### 例句
+He will have been pleased by Marshal Yazov's assurance of the armed forces' loyalty.
+### 其他
+第三人称单数：marshals 复数：marshals 现在分词：marshalling 过去式：marshalled 过去分词：marshalled
