@@ -83,3 +83,14 @@ vt.	组织; 安排; 收集; 维持秩序; 结集; 控制人群;
 He will have been pleased by Marshal Yazov's assurance of the armed forces' loyalty.
 ### 其他
 第三人称单数：marshals 复数：marshals 现在分词：marshalling 过去式：marshalled 过去分词：marshalled
+# squash
+### 音标
+英[skwɒʃ]
+美[skwɑːʃ]
+### 解释
+n.	壁球; 南瓜; 果汁饮料; (软式)墙网球; 南瓜小果(主要种类为笋瓜winter squash和西葫芦summer squash); 拥挤的环境（或处所）;
+v.	(使)挤进; 粉碎; 制止; 打断; 塞入; 把…压(或挤)变形; 压软(或挤软、压坏、压扁等); 去除
+### 例句
+He also added American words that weren't in English dictionaries like skunk and squash.
+### 其他
+第三人称单数：squashes 复数：squashes 现在分词：squashing 过去式：squashed 过去分词：squashed
