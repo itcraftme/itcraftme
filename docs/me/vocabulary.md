@@ -94,3 +94,13 @@ v.	(使)挤进; 粉碎; 制止; 打断; 塞入; 把…压(或挤)变形; 压软(
 He also added American words that weren't in English dictionaries like skunk and squash.
 ### 其他
 第三人称单数：squashes 复数：squashes 现在分词：squashing 过去式：squashed 过去分词：squashed
+# algorithm
+### 音标
+英[ˈælɡərɪðəm]
+美[ˈælɡərɪðəm]
+### 解释
+n.	算法; 计算程序;
+### 例句
+"An ultimate face recognition algorithm should perform with billions of people in a dataset," the researchers wrote.
+### 其他
+复数：algorithms
