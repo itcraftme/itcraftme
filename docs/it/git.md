@@ -127,7 +127,7 @@ git push origin <branch>
 # git create branch
 
 ```
-git checkout -b <branchname> <origin/branchname>
+git checkout -b <branchname> <origin/branchname>  //git checkout -b Yan origin/Yan
 ```
 # push local branch to remote
 
