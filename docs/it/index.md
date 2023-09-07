@@ -9,3 +9,4 @@ layout: default
 ## [Knowledge of powershell](./powershell.md)
 ## [Knowledge of regular expression](./regex.md)
 ## [Knowledge of Jenkins](./Jenkins.md)
+## [Knowledge of Jmeter](./Jmeter.md)
