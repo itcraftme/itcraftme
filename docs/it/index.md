@@ -8,3 +8,4 @@ layout: default
 ## [Knlowledge of Linux](./linux.md)
 ## [Knowledge of powershell](./powershell.md)
 ## [Knowledge of regular expression](./regex.md)
+## [Knowledge of Jenkins](./Jenkins.md)
