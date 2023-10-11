@@ -104,3 +104,21 @@ n.	算法; 计算程序;
 "An ultimate face recognition algorithm should perform with billions of people in a dataset," the researchers wrote.
 ### 其他
 复数：algorithms
+# heterogeneous
+### 音标
+英[ˌhetərəˈdʒiːniəs]
+美[ˌhetərəˈdʒiːniəs]
+### 解释
+adj.	各种各样的; 由很多种类组成的;
+### 例句
+At the present time my mind is so full of heterogeneous matter that I almost despair of ever being able to put it in order.
+当时，我的脑子里塞满了各种各样的问题，以至于无法将思路理清。
+# homogeneous
+### 音标
+英[ˌhɒməˈdʒiːniəs]
+美[ˌhoʊməˈdʒiːniəs]
+### 解释
+adj.	同种类的; 由相同(或同类型)事物(或人)组成的;
+### 例句
+His hobby was to collect homogeneous animals'horns home and abroad.
+他的爱好是收集国内外同种类的动物的角。
