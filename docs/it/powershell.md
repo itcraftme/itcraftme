@@ -141,3 +141,79 @@ $CimSession = New-CimSession -ComputerName 192.168.83.18 -SessionOption $DCOM -C
 #Get-CimInstance -CimSession $CimSession -ClassName Win32_BIOS
 $app = Invoke-CimMethod -CimSession $CimSession -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine = "cmd.exe /c C:\Temp\abc.bat" }
 ```
+## Powershell with UI automation
+### Root element for everything
+```
+$root = [Windows.Automation.AutomationElement]::RootElement
+```
+### Main assemblies with UI automation
+```
+Add-Type -Path ".\UIAutomationTypes.dll"
+Add-Type -Path ".\UIAutomationClient.dll"
+Add-Type -Path ".\WindowsBase.dll"
+```
+### To find controls
+```
+function FindWithClassnameandName($whichcontrol,$classname,$name)
+{
+    $targetcontrol = $null
+    if($whichcontrol -eq $null)
+    {
+        "the start point of the control is null" | Out-Host
+        return $targetcontrol
+    }
+    $con1 = New-Object Windows.Automation.PropertyCondition([Windows.Automation.AutomationElement]::ClassNameProperty, $classname)
+    $con2 = New-Object Windows.Automation.PropertyCondition([Windows.Automation.AutomationElement]::NameProperty, $name)
+    $target  =  New-Object Windows.Automation.AndCondition($con1,$con2)
+    $targetcontrol = $whichcontrol.FindFirst([Windows.Automation.TreeScope]::Descendants, $target)
+    $targetcontrol.Current | Out-Host
+    $info = $whichcontrol.current
+    if($targetcontrol -eq $null)
+    {
+        "Can not find the target control with $info classname : $classname and name : $name" | Out-Host
+    }
+    return $targetcontrol
+}
+function FindWithName($whichcontrol,$name)
+{
+    $targetcontrol = $null
+    if($whichcontrol -eq $null)
+    {
+        "the start point of the control is null" | Out-Host
+        return $targetcontrol
+    }
+    $con1 = New-Object Windows.Automation.PropertyCondition([Windows.Automation.AutomationElement]::NameProperty, $name)
+    $targetcontrol = $whichcontrol.FindFirst([Windows.Automation.TreeScope]::Descendants, $con1)
+    $targetcontrol.Current | Out-Host
+    $info = $whichcontrol.current
+    if($targetcontrol -eq $null)
+    {
+        "Can not find the target control with $info  name : $name" | Out-Host
+    }
+    return $targetcontrol
+}
+```
+### To work with tree walker
+```
+    $treewalker = [Windows.Automation.TreeWalker]::RawViewWalker   //RawView, ContentView, ControlView
+    $child = $treewalker.GetFirstChild($root)
+    $child.current | Out-Host
+    $sibling = $treewalker.GetNextSibling($child)
+    $sibling.current | Out-Host
+
+```
+### To maximize a window
+```
+function MaximizeWindow($root,$name)
+{
+    sleep -s 2
+    $window = FindWithName $root $name
+    [System.Windows.Automation.WindowPattern]$windowpattern = $window.GetCurrentPattern([System.Windows.Automation.WindowPattern]::Pattern)
+    $windowpattern.SetWindowVisualState([System.Windows.Automation.WindowVisualState]::Maximized)
+}
+```
+### Tools for UI automation
+- Precondition: Windows SDK installed
+- inspect.exe
+- accevent.exe
+- UIAVerify
