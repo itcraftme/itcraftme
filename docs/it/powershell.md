@@ -143,17 +143,17 @@ $app = Invoke-CimMethod -CimSession $CimSession -ClassName Win32_Process -Method
 ```
 ## Powershell with UI automation
 ### Root element for everything
-```
+```powershell
 $root = [Windows.Automation.AutomationElement]::RootElement
 ```
 ### Main assemblies with UI automation
-```
+```powershell
 Add-Type -Path ".\UIAutomationTypes.dll"
 Add-Type -Path ".\UIAutomationClient.dll"
 Add-Type -Path ".\WindowsBase.dll"
 ```
 ### To find controls
-```
+```powershell
 function FindWithClassnameandName($whichcontrol,$classname,$name)
 {
     $targetcontrol = $null
@@ -194,7 +194,7 @@ function FindWithName($whichcontrol,$name)
 }
 ```
 ### To work with tree walker
-```
+```powershell
     $treewalker = [Windows.Automation.TreeWalker]::RawViewWalker   //RawView, ContentView, ControlView
     $child = $treewalker.GetFirstChild($root)
     $child.current | Out-Host
@@ -203,7 +203,7 @@ function FindWithName($whichcontrol,$name)
 
 ```
 ### To maximize a window
-```
+```powershell
 function MaximizeWindow($root,$name)
 {
     sleep -s 2
