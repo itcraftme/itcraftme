@@ -122,3 +122,7 @@ adj.	同种类的; 由相同(或同类型)事物(或人)组成的;
 ### 例句
 His hobby was to collect homogeneous animals'horns home and abroad.
 他的爱好是收集国内外同种类的动物的角。
+# orchestration
+### 解释
+Orchestration is the coordination and management of multiple computer systems, applications and/or services, stringing together multiple tasks in order to execute a larger workflow or process. These processes can consist of multiple tasks that are automated and can involve multiple systems.
+The goal of orchestration is to streamline and optimize the execution of frequent, repeatable processes and thus to help data teams more easily manage complex tasks and workflows. Anytime a process is repeatable, and its tasks can be automated, orchestration can be used to save time, increase efficiency, and eliminate redundancies.
