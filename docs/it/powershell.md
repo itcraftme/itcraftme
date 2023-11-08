@@ -220,6 +220,7 @@ function MaximizeWindow($root,$name)
 # Powershell with windows keys
 ### Lib to invoke
 ```powershell
+
 Param (
     [Parameter(position=0, mandatory=$true, parametersetname='key')]
     [char]$Key,
@@ -396,6 +397,7 @@ switch($PSCmdlet.ParameterSetName){
     'key' { [KBEmulator]::SendKeyboard($Key) }
     'scancode' { [KBEmulator]::SendScanCode($ScanCode) }
 }
+
 ```
 ### sample (open calculator)
 ```powershell
