@@ -219,8 +219,8 @@ function MaximizeWindow($root,$name)
 - UIAVerify
 # Powershell with windows keys
 ### Lib to invoke
-```powershell
 
+```powershell
 Param (
     [Parameter(position=0, mandatory=$true, parametersetname='key')]
     [char]$Key,
@@ -397,9 +397,10 @@ switch($PSCmdlet.ParameterSetName){
     'key' { [KBEmulator]::SendKeyboard($Key) }
     'scancode' { [KBEmulator]::SendScanCode($ScanCode) }
 }
-
 ```
+
 ### sample (open calculator)
+
 ```powershell
 .\KBEmulator.ps1 -ScanCode '0x5B'
 Start-Sleep 1
@@ -413,5 +414,6 @@ Start-Sleep 1
 Start-Sleep 1
 .\KBEmulator.ps1 -ScanCode '0x0D'
 ```
+
 ### keycode reference
 [link](https://boostrobotics.eu/windows-key-codes/)
