@@ -441,3 +441,210 @@ if ($version) {
 } else {
     Write-Host -Object '.NET Framework Version 4.5 or later is not detected.'
 ```
+
+# Example of turning on bit locker
+```powershell
+param(
+[Parameter(Mandatory = $True)]
+[string] $toEnableTPM
+) 
+Add-Type -Path ".\UIAutomationTypes.dll"
+Add-Type -Path ".\UIAutomationClient.dll"
+Add-Type -Path ".\WindowsBase.dll"
+$retriesLong = 60
+$retriesShort = 10
+$interval = 500
+function EnableTPM()
+{
+    "Enabling TPM" | out-host
+    Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\FVE" -Name "UseAdvancedStartup" -Value 1
+    Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\FVE" -Name "EnableBDEWithNoTPM" -Value 1
+}
+function FindWithClassnameandName($whichcontrol,$classname,$name,$isMandatory,$intLongOrShort)
+{
+    switch ($intLongOrShort){
+        0{$retries = $retriesShort}
+        1{$retries = $retriesLong}
+    }
+    $targetcontrol = $null
+    if($whichcontrol -eq $null)
+    {
+        "the start point of the control is null" | Out-Host
+        return $targetcontrol
+    }
+    $con1 = New-Object Windows.Automation.PropertyCondition([Windows.Automation.AutomationElement]::ClassNameProperty, $classname)
+    $con2 = New-Object Windows.Automation.PropertyCondition([Windows.Automation.AutomationElement]::NameProperty, $name)
+    $target  =  New-Object Windows.Automation.AndCondition($con1,$con2)
+    for ($i=0;$i -lt $retries;$i++)
+    {
+        sleep -Milliseconds $interval
+        $targetcontrol = $whichcontrol.FindFirst([Windows.Automation.TreeScope]::Descendants, $target)
+        if($targetcontrol -ne $null) {break}
+        if(($i -eq ($retries-1)) -and $isMandatory) {exit 1}
+        "Tryig to find control with $name and $classname with $i times" | out-host
+    }
+    $targetcontrol.Current | Out-Host
+    $info = $whichcontrol.current
+    if($targetcontrol -eq $null)
+    {
+        "Can not find the target control with $info classname : $classname and name : $name" | Out-Host
+    }
+    return $targetcontrol
+}
+function FindWithName($whichcontrol,$name,$isMandatory,$intLongOrShort)
+{
+    switch ($intLongOrShort){
+        0{$retries = $retriesShort}
+        1{$retries = $retriesLong}
+    }
+    $targetcontrol = $null
+    if($whichcontrol -eq $null)
+    {
+        "the start point of the control is null" | Out-Host
+        return $targetcontrol
+    }
+    $con1 = New-Object Windows.Automation.PropertyCondition([Windows.Automation.AutomationElement]::NameProperty, $name)
+    for ($i = 0;$i -lt $retries;$i++)
+    {
+        sleep -Milliseconds $interval
+        $targetcontrol = $whichcontrol.FindFirst([Windows.Automation.TreeScope]::Descendants, $con1)
+        if($targetcontrol -ne $null) {break}
+        if(($i -eq ($retries-1)) -and $isMandatory) {exit 1}
+        "Tryig to find control with $name with $i times" | out-host
+    }
+    $targetcontrol.Current | Out-Host
+    $info = $whichcontrol.current
+    if($targetcontrol -eq $null)
+    {
+        "Can not find the target control with $info  name : $name" | Out-Host
+    }
+    return $targetcontrol
+}
+function FindChildWithName($whichcontrol,$name,$isMandatory,$intLongOrShort)
+{
+    switch ($intLongOrShort){
+        0{$retries = $retriesShort}
+        1{$retries = $retriesLong}
+    }
+    $targetcontrol = $null
+    if($whichcontrol -eq $null)
+    {
+        "the start point of the control is null" | Out-Host
+        return $targetcontrol
+    }
+    $con1 = New-Object Windows.Automation.PropertyCondition([Windows.Automation.AutomationElement]::NameProperty, $name)
+    for ($i = 0;$i -lt $retries;$i++)
+    {
+        sleep -Milliseconds $interval
+        $targetcontrol = $whichcontrol.FindFirst([Windows.Automation.TreeScope]::Children, $con1)
+        if($targetcontrol -ne $null) {break}
+        if(($i -eq ($retries-1)) -and $isMandatory) {exit 1}
+        "Tryig to find control with $name with $i times" | out-host
+    }
+    $targetcontrol.Current | Out-Host
+    $info = $whichcontrol.current
+    if($targetcontrol -eq $null)
+    {
+        "Can not find the target control with $info  name : $name" | Out-Host
+    }
+    return $targetcontrol
+}
+function FindWithId($whichcontrol,$Id,$isMandatory,$intLongOrShort)
+{
+    switch ($intLongOrShort){
+        0{$retries = $retriesShort}
+        1{$retries = $retriesLong}
+    }
+    $targetcontrol = $null
+    if($whichcontrol -eq $null)
+    {
+        "the start point of the control is null" | Out-Host
+        return $targetcontrol
+    }
+    $con1 = New-Object Windows.Automation.PropertyCondition([Windows.Automation.AutomationElement]::AutomationIdProperty, $Id)
+    for ($i=0;$i -lt $retries;$i++)
+    {
+        sleep -Milliseconds $interval
+        $targetcontrol = $whichcontrol.FindFirst([Windows.Automation.TreeScope]::Descendants, $con1)
+        if($targetcontrol -ne $null) {break}
+        if(($i -eq ($retries-1)) -and $isMandatory) {exit 1}
+        "Tryig to find control with $Id with $i times" | out-host
+    }
+    $targetcontrol.Current | Out-Host
+    $info = $whichcontrol.current
+    if($targetcontrol -eq $null)
+    {
+        "Can not find the target control with $info  AutomationId : $Id" | Out-Host
+    }
+    return $targetcontrol
+}
+function InvokeButton($root,$classname,$name,$isMandatory,$intLongOrShort)
+{
+    $target = FindWithClassnameandName $root $classname  $name $isMandatory $intLongOrShort
+    $target.GetCurrentPattern([Windows.Automation.InvokePattern]::Pattern).Invoke()
+}
+function MaximizeWindow($root,$name,$isMandatory,$intLongOrShort)
+{
+    $window = FindChildWithName $root $name $isMandatory $intLongOrShort
+    [System.Windows.Automation.WindowPattern]$windowpattern = $window.GetCurrentPattern([System.Windows.Automation.WindowPattern]::Pattern)
+    $windowpattern.SetWindowVisualState([System.Windows.Automation.WindowVisualState]::Maximized)
+}
+function main()
+{
+    if([System.Convert]::ToBoolean($toEnableTPM)){EnableTPM}
+    
+    #start a window
+    $gp = [Diagnostics.Process]::Start('control.exe')
+
+    #get root 
+    $root = [Windows.Automation.AutomationElement]::RootElement
+
+    #maximize a window from root
+    MaximizeWindow $root "Control Panel" $true 0
+
+    #click on system and security
+    InvokeButton $root "ControlPanelLink"  "System and Security" $true 0
+
+    #click on bitlocker drive encryption
+    InvokeButton $root "ControlPanelLink"  "BitLocker Drive Encryption" $true 0
+
+    #click on Turn on BitLocker
+    InvokeButton $root "Button"  "Turn on BitLocker" $true 0
+
+    #click on next button
+    InvokeButton $root "CCPushButton"  "Next" $false 1
+
+    #click on next button
+    InvokeButton $root "CCPushButton"  "Next" $false 1
+
+    #click on Insert a USB flash drive
+    InvokeButton $root "CCCommandLink"  "Insert a USB flash drive" $false 0
+
+    #click on save
+    InvokeButton $root "CCPushButton"  "Save" $false 0
+
+    #click on next button
+    InvokeButton $root "CCPushButton"  "Next" $false 0
+
+
+    #click on Save to a USB flash drive
+    InvokeButton $root "CCCommandLink"  "Save to a USB flash drive" $true 0
+
+    #click on save
+    InvokeButton $root "CCPushButton"  "Save" $true 0
+
+    #click on two next button
+    InvokeButton $root "CCPushButton"  "Next" $true 0
+
+    #click on two next button
+    InvokeButton $root "CCPushButton"  "Next" $true 0
+    
+    #click on continue 
+    InvokeButton $root "CCPushButton"  "Continue" $false 0
+
+    #click on Start encrypting 
+    InvokeButton $root "CCPushButton"  "Start encrypting" $false 0
+
+}
+main
+```
