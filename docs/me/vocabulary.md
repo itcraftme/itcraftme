@@ -126,3 +126,43 @@ His hobby was to collect homogeneous animals'horns home and abroad.
 ### 解释
 - Orchestration is the coordination and management of multiple computer systems, applications and/or services, stringing together multiple tasks in order to execute a larger workflow or process. These processes can consist of multiple tasks that are automated and can involve multiple systems.
 - The goal of orchestration is to streamline and optimize the execution of frequent, repeatable processes and thus to help data teams more easily manage complex tasks and workflows. Anytime a process is repeatable, and its tasks can be automated, orchestration can be used to save time, increase efficiency, and eliminate redundancies.
+# Tolerance
+### 音标 /ˈtäl(ə)rəns/
+### 解释
+1. the ability or willingness to tolerate something, in particular the existence of opinions or behavior that one does not necessarily agree with.
+"the tolerance of corruption"
+近义词：forbearance，
+toleration，
+sufferance，
+liberality，
+open-mindedness，
+lack of prejudice，
+lack of bias，
+broad-mindedness，
+liberalism，
+patience，
+long-suffering，
+magnanimity，
+sympathy，
+understanding，
+charity，
+lenience，
+leniency，
+lenity，
+indulgence，
+clemency，
+permissiveness，
+complaisance
+反义词：intolerance
+2. the capacity to endure continued subjection to something, especially a drug, transplant, antigen, or environmental conditions, without adverse reaction.
+"the desert camel shows the greatest tolerance to dehydration"
+近义词： endurance of，
+acceptance of，
+resistance to，
+immunity to，
+nonsusceptibility to，
+resilience to
+3. 中文翻译
+   - 公差
+   - 气度
+  
