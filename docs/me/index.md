@@ -3,6 +3,7 @@ layout: default
 ---
 ###  [<< back home](../../index.md)
 ## [China history](./history.md)
+## [Ming history](./ming.md)
 ## [English vocabularies](./vocabulary.md)
 [//]:  ## [Pick ups](./pickups.md)
 ## [UK visa](./UKVisa.md)
