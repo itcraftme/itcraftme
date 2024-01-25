@@ -16,7 +16,7 @@
   - Container (*Can die easily and each time it will get a new ip address so it is not easy to manage here service comes up to solve this problem.*)
   - Service (*Internal or external service.*)
   - Ingress (*Forward request to service.*)
-  - Configmap 9*Configuration of service and others.*)
+  - Configmap (*Configuration of service and others.*)
   - Secret (*Store confidential data and it just works like configmap.*)
   - Volume for data storage (*Database data or log data has to be persistent.*)
   - Replica (*Can be configured to create a replica pod.*)
