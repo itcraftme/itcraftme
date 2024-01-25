@@ -165,4 +165,23 @@ resilience to
 3. 中文翻译
    - 公差
    - 气度
-  
+# Hierarchy
+### 音标 /ˈhī(ə)ˌrärkē/
+### 解释
+a system or organization in which people or groups are ranked one above the other according to status or authority.
+"the initiative was with those lower down in the hierarchy"
+近义词：
+pecking order
+ranking
+grading
+ladder
+social order
+social stratum
+social scale
+class system
+the clergy of the Catholic or Episcopal Church; the religious authorities.
+noun: the hierarchy
+"the Roman Catholic hierarchy in Romania"
+the upper echelons of a hierarchical system; those in authority.
+noun: the hierarchy
+"the magazine was read quite widely even by some of the hierarchy"  
