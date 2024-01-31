@@ -126,7 +126,7 @@ His hobby was to collect homogeneous animals'horns home and abroad.
 ### 解释
 - Orchestration is the coordination and management of multiple computer systems, applications and/or services, stringing together multiple tasks in order to execute a larger workflow or process. These processes can consist of multiple tasks that are automated and can involve multiple systems.
 - The goal of orchestration is to streamline and optimize the execution of frequent, repeatable processes and thus to help data teams more easily manage complex tasks and workflows. Anytime a process is repeatable, and its tasks can be automated, orchestration can be used to save time, increase efficiency, and eliminate redundancies.
-# Tolerance
+# tolerance
 ### 音标 /ˈtäl(ə)rəns/
 ### 解释
 1. the ability or willingness to tolerate something, in particular the existence of opinions or behavior that one does not necessarily agree with.
@@ -165,7 +165,7 @@ resilience to
 3. 中文翻译
    - 公差
    - 气度
-# Hierarchy
+# hierarchy
 ### 音标 /ˈhī(ə)ˌrärkē/
 ### 解释
 a system or organization in which people or groups are ranked one above the other according to status or authority.
