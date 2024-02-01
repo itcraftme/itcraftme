@@ -6,4 +6,4 @@ Best tool for building Java projects
   - Unzip and create a new environment variable for it
 # Init
   - Gradle init: make choices in the steps
-  - Build structure :
+  - ![Build structure](./images/GradleBuildStructure.jpg)
