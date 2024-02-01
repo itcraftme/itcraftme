@@ -185,3 +185,7 @@ noun: the hierarchy
 the upper echelons of a hierarchical system; those in authority.
 noun: the hierarchy
 "the magazine was read quite widely even by some of the hierarchy"  
+# faceted
+### 音标  /ˈfæsətɪd/
+### 解释
+The adjective faceted is most often used to describe a gem or semi-precious stone that's been cut and polished. A diamond ring gleams and sparkles in part because it's faceted, giving it many small surfaces off of which light can reflect. Things that are figuratively faceted have a lot of different features or attributes: "It's impossible to see how faceted someone is when you first meet them." Faceted comes from the French facette, "little face."
