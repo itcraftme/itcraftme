@@ -7,3 +7,4 @@ Best tool for building Java projects
 # Init
   - Gradle init: make choices in the steps
   - ![Build structure](./images/GradleBuildStructure.jpg)
+# Gradle [knowledge](https://docs.gradle.org/8.5/userguide/userguide.html)
