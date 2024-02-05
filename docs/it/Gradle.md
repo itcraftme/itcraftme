@@ -11,7 +11,7 @@ Best tool for building Java projects
 
 # Gradle add a lib to project
   - build.gradle
-  ```
+  ```java
   repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
