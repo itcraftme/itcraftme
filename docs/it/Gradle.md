@@ -38,3 +38,9 @@ Best tool for building Java projects
     useJUnitPlatform()
   }
   ```
+# run
+  - Run with gradle 'gradle run --info'
+  - Run with gradle wrapper './gradlew run --info'
+
+# gradle workflow
+  ![workflow](./images/gradleworkflow.png)
