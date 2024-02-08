@@ -44,3 +44,6 @@ Best tool for building Java projects
 
 # gradle workflow
   ![workflow](./images/gradleworkflow.png)
+
+# gradle lifecycle
+  ![lifecycle](./images/gradlelifecycle.png)
