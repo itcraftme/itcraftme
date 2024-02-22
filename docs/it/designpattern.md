@@ -7,3 +7,5 @@
 ![factory design pattern](./images/designpattern\factory.png)
 # abstract factory  
 ![abstract factory design pattern](./images/designpattern\abstractfactory.png)
+![singleton design pattern](./images/designpattern\singleton.png)
+![builder design pattern](./images/designpattern\builder.png)
