@@ -11,3 +11,5 @@
 ![singleton design pattern](./images/designpattern\singleton.png)
 # builder
 ![builder design pattern](./images/designpattern\builder.png)
+# prototype
+![prototype design pattern](./images/designpattern\prototype.png)
