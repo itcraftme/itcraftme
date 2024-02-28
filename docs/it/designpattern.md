@@ -14,4 +14,4 @@
 # prototype
 ![prototype design pattern](./images/designpattern\prototype.png)
 # adapter
-![prototype design pattern](./images/designpattern\adapter.png)
+![adapter design pattern](./images/designpattern\adapter.png)
