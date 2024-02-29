@@ -15,3 +15,5 @@
 ![prototype design pattern](./images/designpattern\prototype.png)
 # adapter
 ![adapter design pattern](./images/designpattern\adapter.png)
+# bridge
+![bridge design pattern](./images/designpattern\bridge.png)
