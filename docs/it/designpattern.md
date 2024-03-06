@@ -1,4 +1,6 @@
 ###  [<< back](./index.md)
+# Material
+[link of design pattern](https://www.tutorialspoint.com/design_pattern/observer_pattern.htm)
 # strategy 
 ![strategy design pattern](./images/designpattern\strategy.png)
 # observer 
