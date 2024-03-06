@@ -21,3 +21,5 @@
 ![bridge design pattern](./images/designpattern\bridge.png)
 # composite
 ![composite design pattern](./images/designpattern\composite.png)
+# decorator
+![decorator design pattern](./images/designpattern\decorator.png)
