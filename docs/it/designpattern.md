@@ -19,3 +19,5 @@
 ![adapter design pattern](./images/designpattern\adapter.png)
 # bridge
 ![bridge design pattern](./images/designpattern\bridge.png)
+# composite
+![composite design pattern](./images/designpattern\composite.png)
