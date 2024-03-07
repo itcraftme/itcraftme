@@ -189,3 +189,27 @@ noun: the hierarchy
 ### 音标  /ˈfæsətɪd/
 ### 解释
 The adjective faceted is most often used to describe a gem or semi-precious stone that's been cut and polished. A diamond ring gleams and sparkles in part because it's faceted, giving it many small surfaces off of which light can reflect. Things that are figuratively faceted have a lot of different features or attributes: "It's impossible to see how faceted someone is when you first meet them." Faceted comes from the French facette, "little face."
+# facade
+### 音标 /fəˈsäd/
+### 解释
+- the front of a building
+1. the facade of the bank
+2. the windowless façade of the skyscraper a brick facade
+- a way of behaving or appearing that gives other people a false idea of your true feelings or situation
+1. They were trying to preserve the facade of a happy marriage.
+2. I could sense the hostility lurking behind her polite facade.
+# composite
+### 音标 /kəmˈpäzət/
+### 解释
+adjective
+1.made up of various parts or elements.
+"this soup is one of those composite dishes which you gradually build up"
+2.relating to or denoting a classical order of architecture consisting of elements of the Ionic and Corinthian orders.
+noun
+1.a thing made up of several parts or elements.
+"the English legal system is a composite of legislation and judicial precedent"
+2.BOTANY
+a plant of the daisy family ( Compositae ).
+verb
+combine (two or more images) to make a single picture, especially electronically.
+"two pieces of footage depicting the halves of the ship were composited to give the impression of the full ship sinking into the water"
