@@ -23,3 +23,7 @@
 ![composite design pattern](./images/designpattern\composite.png)
 # decorator
 ![decorator design pattern](./images/designpattern\decorator.png)
+# fasade
+![fasade design pattern](./images/designpattern\fasade.png)
+# proxy
+![proxy design pattern](./images/designpattern\proxy.png)
