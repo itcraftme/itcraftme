@@ -28,4 +28,4 @@
 # proxy
 ![proxy design pattern](./images/designpattern\proxy.png)
 # chain of responsibility
-![chain of responsibility design pattern](./images/designpattern\chainofresponsibility.png)
+![chain of responsibility design pattern](./images/designpattern\chainOfResponsibility.png)
