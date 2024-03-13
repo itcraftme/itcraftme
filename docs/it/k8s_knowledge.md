@@ -30,7 +30,7 @@
 ### Scheduler 
     - Decides which worker node will be scheduled in an intelegient way and Kubelet in worker node will acutally schedule it.
 ### Controller Manager 
-    - Detects state change such as pad dies and tells the schudler to notice it.
+    - Detects state change such as pod dies and tells the schudler to notice it.
 ### etcd 
     - Is Key-value store for the cluster and application data is not stored here.
 ## Worker processes
@@ -192,7 +192,7 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 808
+      targetPort: 8080
 ```
 #### deployment yaml
 
