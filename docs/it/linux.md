@@ -21,3 +21,5 @@
 - Open a long file which can not fit into the command ```cat file1 | more```
 - Open a file with whild card "*" ```cat *.txt``` (this will open all the txt files in targeted location)
 - Append content to a file ```cat >> geeks.txt The newly added text.```
+### Leetcode example
+```cat words.txt | tr -s ' ' '\n' | sort | uniq -c | sort -r -n -k 1 |awk '{print $2, $1}'```
