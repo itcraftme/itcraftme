@@ -31,3 +31,5 @@
 ![chain of responsibility design pattern](./images/designpattern\chainOfResponsibility.png)
 # command
 ![command design pattern](./images/designpattern\command.png)
+# interpreter
+![interpreter design pattern](./images/designpattern\interpreter.png)
