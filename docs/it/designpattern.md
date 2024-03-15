@@ -39,3 +39,5 @@
 ![interpreter design pattern](./images/designpattern\interpreter.png)
 # iterator
 ![iterator design pattern](./images/designpattern\iterator.png)
+# mediator
+![mediator design pattern](./images/designpattern\mediator.png)
