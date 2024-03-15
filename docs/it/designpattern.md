@@ -37,3 +37,5 @@
 ![command design pattern](./images/designpattern\command.png)
 # interpreter
 ![interpreter design pattern](./images/designpattern\interpreter.png)
+# iterator
+![iterator design pattern](./images/designpattern\iterator.png)
