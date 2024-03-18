@@ -41,3 +41,5 @@
 ![iterator design pattern](./images/designpattern\iterator.png)
 # mediator
 ![mediator design pattern](./images/designpattern\mediator.png)
+# momento
+![momento design pattern](./images/designpattern\momento.png)
