@@ -43,3 +43,7 @@
 ![mediator design pattern](./images/designpattern\mediator.png)
 # momento
 ![momento design pattern](./images/designpattern\momento.png)
+# state
+![state design pattern](./images/designpattern\state.png)
+# null
+![null design pattern](./images/designpattern\null.png)
