@@ -5,6 +5,9 @@
 - [knowledge of Linux](https://linux265.com/course/)
 - [All knowledge](https://www.geeksforgeeks.org/)
 
+# Linux file system
+![File system](./images/linux/filesystem.png)
+- /usr ```Unix System Resources```
 # Linux command
 ## cat
 - View the content of a file ```cat filename```
