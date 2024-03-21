@@ -5,7 +5,7 @@
 - [knowledge of Linux](https://linux265.com/course/)
 - [All knowledge](https://www.geeksforgeeks.org/)
 
-# Linux file system
+## Linux file system
 ![File system](./images/linux/filesystem.png)
 - /usr ```Unix System Resources```
 # Linux command
@@ -86,3 +86,34 @@ END {
 }
 ' file.txt
 ```
+## pushd & popd
+- push /var to the stack ```pushd /var``` 
+- pop the directory from the stack  ```popd```   
+## reset & ctrl+t & clear
+- clear the history and screen ```reset```
+- clear the screen but not to clean the history  ```ctrl + t```
+- clear the history and screen ```clear```
+## ctrl+z & fg
+- minimize current app and take it to the background ```ctrl + z```
+- bring the app to the foreground ```fg```
+## sudo !!
+- give the permission for the previous command 
+```
+apt update
+sudo !!
+```
+## ctrl+r & history
+- find the historical command ```ctrl + z```
+- find the history command with numbers ```history```
+- execute the command with number in the history ```!183```
+## ctrl + a & z & u
+- reach the beginning of the command line ```ctrl + a```
+- reach the end of the command line ```ctrl + e```
+- clear of the command line ```ctrl + u```
+## ; and &&
+- run two command together (error will not block the other command) ```ls -l \wrongdir ; ps```
+- run two commands together (error will block the other command) ```ls -l \wrongdir && ps```
+## truncat
+- clear the content of the file and keep empty file ```truncat -s 0 hello.txt```
+## mount 
+- show the result in a list ```mount | column -t```
