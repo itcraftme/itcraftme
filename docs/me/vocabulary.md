@@ -213,3 +213,4 @@ a plant of the daisy family ( Compositae ).
 verb
 combine (two or more images) to make a single picture, especially electronically.
 "two pieces of footage depicting the halves of the ship were composited to give the impression of the full ship sinking into the water"
+
