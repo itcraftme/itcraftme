@@ -51,3 +51,5 @@
 ![template design pattern](./images/designpattern\template.png)
 # visitor
 ![visitor design pattern](./images/designpattern\visitor.png)
+# MVC（Model-View-Controller）
+![MVC design pattern](./images/designpattern\MVC.png)
