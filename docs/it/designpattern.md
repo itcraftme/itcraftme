@@ -55,3 +55,7 @@
 ![MVC design pattern](./images/designpattern\MVC.png)
 # business delegate
 ![business delegate design pattern](./images/designpattern\businessdelegate.png)
+# composite entity
+![composite entity design pattern](./images/designpattern\compositeentity.png)
+# DAO (Data Access Object)
+![data access object pattern](./images/designpattern\dao.png)
