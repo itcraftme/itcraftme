@@ -13,3 +13,4 @@ layout: default
 ## [Knowledge of Gradle](./Gradle.md)
 ## [Knowledge of designpattern](./designpattern.md)
 ## [Knowledge of mysql](./MySQL.md)
+## [Knowledge of network](./network.md)
