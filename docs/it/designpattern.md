@@ -61,3 +61,10 @@
 ![data access object pattern](./images/designpattern\dao.png)
 # front controller
 ![front controller pattern](./images/designpattern\frontcontroller.png)
+# intercepting filter
+![intercepting filter pattern](./images/designpattern\interceptingfilter.png)
+# service locator 
+- JNDI（Java Naming and Directory Interface）
+![service locator pattern](./images/designpattern\servicelocator.png)
+# transfer object 
+![transfer object pattern](./images/designpattern\transferobject.png)
