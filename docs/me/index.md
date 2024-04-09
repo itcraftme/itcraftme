@@ -3,6 +3,7 @@ layout: default
 ---
 ###  [<< back home](../../index.md)
 ## [China history](./history.md)
+## [Maps](./map.md)
 ## [Ming history](./ming.md)
 ## [Han history](./han.md)
 ## [English vocabularies](./vocabulary.md)
