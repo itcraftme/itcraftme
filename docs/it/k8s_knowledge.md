@@ -63,7 +63,7 @@ Start a cluster: `minikube start --vm-driver=hyperkit`
 ### Kubectl basic commands
   - Create a deployment: `kubectl deployment nginx-deployment --image=nginx`
   - Get replicaset: `kubectl get replicaset`
-  - Get pod: `kubctl get pod`
+  - Get pod: `kubectl get pod`
   - Edit a deployment: `kubectl edit deployment nginx-deployment`
   - Delete a deployment: `kubectl delete deployment nginx-deployment` 
   - Get status of different k8s components: `kubectl get nodes | pod | services | replicaset | deployment`
