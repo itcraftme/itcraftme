@@ -648,3 +648,7 @@ function main()
 }
 main
 ```
+# format output  
+```
+write-host  ("{0,-50} : {1,-10} " -f  $CaseName , $duration)
+```
