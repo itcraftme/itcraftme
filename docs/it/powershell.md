@@ -1,7 +1,8 @@
 ###  [<< back](./index.md)
 # Powershell knowledge
 ## Run code in parallel:
-  - Command: `measure-command {ForEach-Object -InputObject $list  -Process { sleep(3) }}`
+- Using Foreach-Object -Parallel command (Supports in PowerShell 7.0 or above)
+- Using Foreach -Parallel in Workflow (Supports PowerShell 5.1 or below)
 ## `break` & ForEach-Object
 ### Break in ForEach-Object
 ForEach-Object is not a loop in powershell so following code with break will break the whole execution.
