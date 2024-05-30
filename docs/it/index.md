@@ -14,3 +14,4 @@ layout: default
 ## [Knowledge of designpattern](./designpattern.md)
 ## [Knowledge of mysql](./MySQL.md)
 ## [Knowledge of network](./network.md)
+## [Knowledge of playwright](./playwright.md)
