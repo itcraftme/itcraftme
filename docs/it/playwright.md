@@ -34,7 +34,12 @@ test('google test', async ({ page }) => {
 ## report after test  [link](https://www.lambdatest.com/learning-hub/playwright-reporting)
 - change report format in .\playwright.config.ts, the report can be json, html etc.
 - change video or screenshot in .\playwright.config.ts  (can be configed to be only on success or failure and so on)
-- npx playwright showreport
+- npx playwright show report
 
+## Handle with special cases
+- handle alert
+- handle drop down
+- handle multiple elements ( nth(index) )
 
-
+## page object module
+- using class, method to put all the elements and actions in one file in order to avoid duplication of code and it is easy to read and maintain
