@@ -653,3 +653,24 @@ main
 ```
 write-host  ("{0,-50} : {1,-10} " -f  $CaseName , $duration)
 ```
+
+# get system counter
+```Powershell
+$totalRam = (Get-CimInstance Win32_PhysicalMemory | Measure-Object -Property capacity -Sum).Sum
+While($true)
+{
+    $date = Get-Date -Format "yyyy-MM-dd HH:mm:ss"       
+    
+    $cpuTime = (Get-Counter '\Processor(_Total)\% Processor Time').CounterSamples.CookedValue
+    $availMem = (Get-Counter '\Memory\Available MBytes').CounterSamples.CookedValue 
+    $date + ' > CPU: ' + $cpuTime.ToString("#,0.000") + '%, Avail. Mem.: ' + $availMem.ToString("N0") + 'MB (' + (104857600 * $availMem / $totalRam).ToString("#,0.0") + '%)' | out-file ".\Performance.txt" -Append
+
+    $processorTime = Get-Counter '\Process(*)\% Processor Time' `
+        | Select-Object -ExpandProperty countersamples `
+        | Select-Object -Property instancename, cookedvalue `
+        | Sort-Object -Property cookedvalue -Descending | Select-Object -First 12 `
+        | ft InstanceName,@{L='CPU';E={($_.Cookedvalue/100).toString('P')}} -AutoSize | out-file ".\Performance.txt" -Append  
+
+    Start-Sleep 2   
+}
+```
