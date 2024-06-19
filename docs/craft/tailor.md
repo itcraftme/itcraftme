@@ -3,7 +3,7 @@
 ![pattern](./Images/tailorfemaletop.png)
 
 # 女装新文化原型的绘制方法
-<<<<<<< HEAD
+
 - [method](https://www.zhihu.com/tardis/zm/art/188759932?source_id=1003)
 
 # 大码男T
@@ -32,5 +32,5 @@
 
 # 睡裤制版
 - ![版型](./Images/designsleepingpants.jpg)
-- ![成品](./Images/sleepingpantsdone.jpg)
->>>>>>> fc807080eb89611bffd17fe3dd52ed6a68e9ed5f
+- ![成品](./Images/sleepingpantsfinished.jpg)
+
