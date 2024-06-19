@@ -674,3 +674,32 @@ While($true)
     Start-Sleep 2   
 }
 ```
+
+# working with srt file
+- file format
+```
+1
+02:09:08,0 --> 00:02:10,0
+subtitle1
+
+2
+00:02:10,0 --> 00:02:30,0
+subtitle1
+
+3
+00:02:30,0 --> 00:03:04,0
+subtitle1
+
+4
+00:03:04,0 --> 00:04:28,0
+subtitle1
+
+5
+00:04:28,0 --> 00:04:35,0
+subtitle1
+```
+
+- code
+```Powershell
+Add-Content $filepath ([String]$starttime + ",0 --> " +  [String]$endtime  + ",0")    #seperated with ":"
+```
