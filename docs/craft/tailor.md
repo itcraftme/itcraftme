@@ -15,3 +15,7 @@
 - ![上衣前片](./Images/top.jpg)
 - ![上衣前片省](./Images/sang.jpg)
 - ![袖子](./Images/sleeve.jpg)
+
+# 睡裤制版
+- ![版型](./Images/designsleepingpants.jpg)
+- ![成品](./Images/sleepingpantsdone.jpg)
