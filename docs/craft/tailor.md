@@ -14,13 +14,6 @@
 
 # 上衣制版（宽松）
 - [上衣前片](./Images/top.jpg)
-- [上衣前片省](./Images/sang.jpg)
-- [袖子](./Images/sleeve.jpg)
-=======
-[method](https://www.zhihu.com/tardis/zm/art/188759932?source_id=1003)
-
-# 上衣制版（宽松）
-- [上衣前片](./Images/top.jpg)
 - [上衣前片省](./Images/topsang.jpg)
 - [袖子](./Images/sleeve.jpg)
 
