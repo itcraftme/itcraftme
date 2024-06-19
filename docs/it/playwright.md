@@ -42,4 +42,8 @@ test('google test', async ({ page }) => {
 - handle multiple elements ( nth(index) )
 
 ## page object module
+<<<<<<< HEAD
 - using class, method to put all the elements and actions in one file in order to avoid duplication of code and it is easy to read and maintain
+=======
+- using class, method to put all the elements and actions in one file in order to avoid duplication of code and it is easy to read and maintain
+>>>>>>> fc807080eb89611bffd17fe3dd52ed6a68e9ed5f
