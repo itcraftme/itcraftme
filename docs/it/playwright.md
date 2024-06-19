@@ -44,4 +44,3 @@ test('google test', async ({ page }) => {
 ## page object module
 
 - using class, method to put all the elements and actions in one file in order to avoid duplication of code and it is easy to read and maintain
-- using class, method to put all the elements and actions in one file in order to avoid duplication of code and it is easy to read and maintain
