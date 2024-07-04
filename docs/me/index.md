@@ -11,3 +11,4 @@ layout: default
 ## [UK visa](./UKVisa.md)
 ## [护照相关事项](./passport.md)
 ## [传统文化-生辰八字](./tiangandizhi.md)
+## [China PR application 中国绿卡申请](./PR.md)
