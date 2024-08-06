@@ -705,3 +705,15 @@ subtitle1
 ```Powershell
 Add-Content $filepath ([String]$starttime + ",0 --> " +  [String]$endtime  + ",0")    #seperated with ":"
 ```
+
+#working with files 
+
+```Powershell
+    $streamReader = New-Object System.IO.StreamReader($sourceFile)
+    $index = 0
+    while( ($line = $streamReader.ReadLine()) -ne $null)
+    {
+        Add-Content -Path    #add path and content
+    }
+    $streamReader.Dispose()
+```
