@@ -48,5 +48,5 @@ Those spouses who are married to a Chinese citizen (having registered Chinese pe
 
 - Prepare resume of you and your spouse in chinese (from age 18 until now and make sure there is no time period gap in between)
 
-- Number 5 frozen money has to be notified and it normally will take one week also
+- Number 5 frozen money has to be notified and it normally will take one week or so
 
