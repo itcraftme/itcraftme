@@ -214,3 +214,8 @@ verb
 combine (two or more images) to make a single picture, especially electronically.
 "two pieces of footage depicting the halves of the ship were composited to give the impression of the full ship sinking into the water"
 
+# orphaned
+### 音标 uk  /ˈɔː.fənd/ us  /ˈɔːr.fənd/
+### 解释
+adjective
+1. having no parents because they have died:
