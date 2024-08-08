@@ -201,18 +201,18 @@ The adjective faceted is most often used to describe a gem or semi-precious ston
 # composite
 ### 音标 /kəmˈpäzət/
 ### 解释
-adjective
-1.made up of various parts or elements.
+- adjective
+1. made up of various parts or elements.
 "this soup is one of those composite dishes which you gradually build up"
-2.relating to or denoting a classical order of architecture consisting of elements of the Ionic and Corinthian orders.
-noun
-1.a thing made up of several parts or elements.
+2. relating to or denoting a classical order of architecture consisting of elements of the Ionic and Corinthian orders.
+- noun
+1. a thing made up of several parts or elements.
 "the English legal system is a composite of legislation and judicial precedent"
-2.BOTANY
+2. BOTANY
 a plant of the daisy family ( Compositae ).
-verb
-combine (two or more images) to make a single picture, especially electronically.
-"two pieces of footage depicting the halves of the ship were composited to give the impression of the full ship sinking into the water"
+- verb
+1. combine (two or more images) to make a single picture, especially electronically.
+2. "two pieces of footage depicting the halves of the ship were composited to give the impression of the full ship sinking into the water"
 
 # orphaned
 ### 音标 uk  /ˈɔː.fənd/ us  /ˈɔːr.fənd/
