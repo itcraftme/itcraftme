@@ -32,7 +32,7 @@ Those spouses who are married to a Chinese citizen (having registered Chinese pe
 
 5. Proof of financial security or financial sources.
     - Get salary provement from both my husband's and my side, other documents such as tax payment or insurance provement was not accepted,and the officer asked us to provide paylist from the bank.
-    - (Additional one for money frozen was not confirmed yet)
+    - Money frozen in the bank with total 150,000 RMB, Type has to be 'time deposit'(定期存款) not 'demand deposit'(活期存款)type
 
 6. A Health check certificate
     - There are two places in Beijing to do this you can make appointment via wechat
@@ -47,4 +47,6 @@ Those spouses who are married to a Chinese citizen (having registered Chinese pe
 - Ask your spouse to go with you when you hand in all the documents to the officer because there are a lot of papers you have to fill in in chinese
 
 - Prepare resume of you and your spouse in chinese (from age 18 until now and make sure there is no time period gap in between)
+
+- Number 5 frozen money has to be notified and it normally will take one week also
 
