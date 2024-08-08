@@ -218,4 +218,10 @@ a plant of the daisy family ( Compositae ).
 ### 音标 uk  /ˈɔː.fənd/ us  /ˈɔːr.fənd/
 ### 解释
 adjective
-1. having no parents because they have died:
+1. having no parents because they have died
+
+# tabulate
+### 音标 uk  /ˈtæb.jə.leɪt/ us  /ˈtæb.jə.leɪt/
+### 解释
+verb
+- to show information in the form of a table (= an arrangement of facts and numbers in rows or blocks)
