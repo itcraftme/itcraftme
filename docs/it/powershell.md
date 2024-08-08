@@ -725,3 +725,14 @@ Add-Content $filepath ([String]$starttime + ",0 --> " +  [String]$endtime  + ",0
     }
     $streamReader.Dispose()
 ```
+
+# working with windows keyboard
+
+```Powershell
+Add-Type -AssemblyName System.Windows.Forms
+ 1..1440 | ForEach-Object {
+     Sleep(5)
+     Write-Host("$_ .....")
+     [System.Windows.Forms.SendKeys]::SendWait("{CAPSLOCK}")
+ }
+```
