@@ -675,6 +675,14 @@ While($true)
 }
 ```
 
+# top command in linux
+- [Link](https://www.redhat.com/sysadmin/interpret-top-output)
+- Uptime
+- Tasks
+- %Cpu(s)
+- MiB Memory
+- MiB Swap
+    
 # working with srt file
 - file format
   
